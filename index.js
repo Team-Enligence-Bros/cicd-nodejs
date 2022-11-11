@@ -8,6 +8,19 @@ const port = 3000
 //   console.log(req)
 //   next()
 // }
+const corsOpts = {
+  origin: '*',
+
+  methods: [
+    'GET',
+    'POST',
+  ],
+
+  allowedHeaders: [
+    'Content-Type',
+  ],
+};
+app.use(cors(corsOpts));
 
 app.use(express.static(path.join(__dirname, "public")))
 // app.use(harryMiddleware)
