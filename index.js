@@ -33,6 +33,7 @@ app.get('/hello/', (req, res) => {
 
   res.send(JSON.stringify({"data": 'Hello World!' + date_ob.toDateString() + " " + date_ob.toLocaleTimeString() }))
 })
+ 
 
 app.get('/about', (req, res) => {
 //   res.send('about')
