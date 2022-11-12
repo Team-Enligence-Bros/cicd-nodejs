@@ -27,8 +27,11 @@ app.use(cors(corsOpts));
 app.use(express.static(path.join(__dirname, "public")))
 // app.use(harryMiddleware)
 
-app.get('/hello/:name', (req, res) => {
-  res.send('Hello World!' +  req.params.name)
+app.get('/hello/', (req, res) => {
+
+  let date_ob = new Date();
+
+  res.send('Hello World!' + date_ob.toLocaleDateString() )
 })
 
 app.get('/about', (req, res) => {
