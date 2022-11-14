@@ -4,6 +4,9 @@
 sudo chmod -R 777 /home/ec2-user/express-app
 
 #navigate into our working directory where we have all our github files
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install --lts
 cd /home/ec2-user/express-app
 
 #add npm and node to path
@@ -12,8 +15,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # loads nvm bash_completion (node is in path now)
 
 #install node modules
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-. ~/.nvm/nvm.sh
+
 npm install
 
 #start our node app in the background
