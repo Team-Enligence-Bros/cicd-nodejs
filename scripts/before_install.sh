@@ -6,6 +6,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 echo installing node
 nvm
 nvm install 16
+npm i
 #create our working directory if it doesnt exist
 DIR="/home/ec2-user/express-app"
 if [ -d "$DIR" ]; then
