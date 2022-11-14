@@ -31,9 +31,8 @@ app.get('/hello/', (req, res) => {
 
   let date_ob = new Date();
 
-  res.send(JSON.stringify({"data": 'Hello World!' + date_ob.toDateString() + " " + date_ob.toLocaleTimeString() }))
+  res.send(JSON.stringify({"data": 'Hello World!' + date_ob.toLocaleDateString() }))
 })
- 
 
 app.get('/about', (req, res) => {
 //   res.send('about')
@@ -42,6 +41,6 @@ app.get('/about', (req, res) => {
     res.json({"harry": 34})
 })
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
