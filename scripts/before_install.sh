@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #download node and npm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-. ~/.nvm/nvm.sh
+cd ~
+curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+sudo bash /tmp/nodesource_setup.sh
+sudo apt install nodejs
 echo installing node
-nvm
-nvm install 16
 npm i
 #create our working directory if it doesnt exist
-DIR="/home/ec2-user/express-app"
+DIR="/home/ubuntu/express-app"
 if [ -d "$DIR" ]; then
   echo "${DIR} exists"
 else
